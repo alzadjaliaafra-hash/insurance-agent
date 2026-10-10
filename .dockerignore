@@ -1,0 +1,18 @@
+# Secrets — never bake into an image you push
+.env
+.env.*
+config.json
+
+# 875MB of arm64 host venv — useless and harmful inside a linux image
+.venv
+venv
+
+# Local state, not app code
+.git
+.gitattributes
+chroma_db
+logs
+__pycache__
+**/__pycache__
+*.pyc
+.DS_Store

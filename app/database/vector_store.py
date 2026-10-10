@@ -25,6 +25,7 @@ class PolicyVectorStore:
         # ✅ Use OpenAI embedding function
         self.embedding_function = embedding_functions.OpenAIEmbeddingFunction(
             api_key=config.openai_api_key,
+            api_base=config.openai_base_url,  # route embeddings to the GreatLearning endpoint
             model_name=config.embedding_model  # "text-embedding-3-small"
         )
         logger.info(f"Using OpenAI embedding model: {config.embedding_model}")
